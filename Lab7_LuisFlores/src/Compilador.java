@@ -1,6 +1,7 @@
 
 import java.io.Serializable;
 import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -18,9 +19,26 @@ public class Compilador implements Serializable {
     private String creador;
     private float lineas;
     private float lexico,sintatico,semantico,intermedio,optimizador,generador;
-    private JTable tabla;
+    
+    private DefaultTableModel simbolos,error;
 
-    public Compilador(String nombre, String creador, float lineas, float lexico, float sintatico, float semantico, float intermedio, float optimizador, float generador, JTable tabla) {
+    public DefaultTableModel getSimbolos() {
+        return simbolos;
+    }
+
+    public void setSimbolos(DefaultTableModel simbolos) {
+        this.simbolos = simbolos;
+    }
+
+    public DefaultTableModel getError() {
+        return error;
+    }
+
+    public void setError(DefaultTableModel error) {
+        this.error = error;
+    }
+
+    public Compilador(String nombre, String creador, float lineas, float lexico, float sintatico, float semantico, float intermedio, float optimizador, float generador, DefaultTableModel simbolos, DefaultTableModel error) {
         this.nombre = nombre;
         this.creador = creador;
         this.lineas = lineas;
@@ -30,7 +48,26 @@ public class Compilador implements Serializable {
         this.intermedio = intermedio;
         this.optimizador = optimizador;
         this.generador = generador;
-        this.tabla = tabla;
+        this.simbolos = simbolos;
+        this.error = error;
+    }
+
+    public static long getSerialVersionUID() {
+        return SerialVersionUID;
+    }
+
+   
+
+    public Compilador(String nombre, String creador, float lineas, float lexico, float sintatico, float semantico, float intermedio, float optimizador, float generador) {
+        this.nombre = nombre;
+        this.creador = creador;
+        this.lineas = lineas;
+        this.lexico = lexico;
+        this.sintatico = sintatico;
+        this.semantico = semantico;
+        this.intermedio = intermedio;
+        this.optimizador = optimizador;
+        this.generador = generador;
     }
 
     public float getGenerador() {
@@ -41,17 +78,7 @@ public class Compilador implements Serializable {
         this.generador = generador;
     }
 
-    public Compilador(String nombre, String creador, float lineas, float lexico, float sintatico, float semantico, float intermedio, float optimizador, JTable tabla) {
-        this.nombre = nombre;
-        this.creador = creador;
-        this.lineas = lineas;
-        this.lexico = lexico;
-        this.sintatico = sintatico;
-        this.semantico = semantico;
-        this.intermedio = intermedio;
-        this.optimizador = optimizador;
-        this.tabla = tabla;
-    }
+ 
 
     public Compilador() {
     }
@@ -67,13 +94,7 @@ public class Compilador implements Serializable {
         this.optimizador = optimizador;
     }
 
-    public JTable getTabla() {
-        return tabla;
-    }
-
-    public void setTabla(JTable tabla) {
-        this.tabla = tabla;
-    }
+ 
 
     public String getNombre() {
         return nombre;
