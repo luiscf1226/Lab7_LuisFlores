@@ -17,8 +17,29 @@ public class Compilador implements Serializable {
     private String nombre;
     private String creador;
     private float lineas;
-    private float lexico,sintatico,semantico,intermedio,optimizador;
+    private float lexico,sintatico,semantico,intermedio,optimizador,generador;
     private JTable tabla;
+
+    public Compilador(String nombre, String creador, float lineas, float lexico, float sintatico, float semantico, float intermedio, float optimizador, float generador, JTable tabla) {
+        this.nombre = nombre;
+        this.creador = creador;
+        this.lineas = lineas;
+        this.lexico = lexico;
+        this.sintatico = sintatico;
+        this.semantico = semantico;
+        this.intermedio = intermedio;
+        this.optimizador = optimizador;
+        this.generador = generador;
+        this.tabla = tabla;
+    }
+
+    public float getGenerador() {
+        return generador;
+    }
+
+    public void setGenerador(float generador) {
+        this.generador = generador;
+    }
 
     public Compilador(String nombre, String creador, float lineas, float lexico, float sintatico, float semantico, float intermedio, float optimizador, JTable tabla) {
         this.nombre = nombre;

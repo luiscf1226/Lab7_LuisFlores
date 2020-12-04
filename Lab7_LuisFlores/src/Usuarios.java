@@ -22,6 +22,10 @@ public class  Usuarios extends Persona{
         this.c = c;
     }
 
+    public Usuarios(String nombre, String apellido, String usuario, String contra) {
+        super(nombre, apellido, usuario, contra);
+    }
+
     public Usuarios(Compilador c, String nombre, String apellido, String usuario, String contra) {
         super(nombre, apellido, usuario, contra);
         this.c = c;
