@@ -876,7 +876,7 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
 
         boolean entro = false;
-        try {
+       
             String user = usuario.getText();
             String pass = password.getText();
             for (int i = 0; i < lista2.size(); i++) {
@@ -895,11 +895,7 @@ public class Main extends javax.swing.JFrame {
                 jd1.setVisible(true);
             }
 
-        } catch (Exception e) {
-
-            JOptionPane.showMessageDialog(null, "Error");
-
-        }
+       
 
     }//GEN-LAST:event_jButton7MouseClicked
 
@@ -919,6 +915,7 @@ public class Main extends javax.swing.JFrame {
             total.setText(t + "");
             Compilador c = new Compilador(name, creator, l1, l2, l3, l4, l5, l6, t);
             lista4.add(c);
+            c.setSimbolos(mod);
             adminbinario a2 = new adminbinario("./Compiladores.cbm");
             a2.cargarArchivo();
             a2.setCompi(c);
@@ -953,6 +950,7 @@ public class Main extends javax.swing.JFrame {
             s = JOptionPane.showInputDialog("Desea Agregar mas? si= 's' ");
 
         }
+        
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -998,13 +996,15 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
         if(evt.getStateChange()==1){
             
-             DefaultTableModel modelo = (DefaultTableModel) table1.getModel();
+            // DefaultTableModel modelo = (DefaultTableModel) table1.getModel();
+            Compilador c1=(Compilador )cb.getSelectedItem();
+            DefaultTableModel modelo22=(DefaultTableModel)c1.getSimbolos();
              DefaultTableModel modelo2 = (DefaultTableModel) table2.getModel();
            
 
             
 
-            table2.setModel(modelo);
+            table2.setModel(modelo22);
         }
     }//GEN-LAST:event_cbItemStateChanged
 
