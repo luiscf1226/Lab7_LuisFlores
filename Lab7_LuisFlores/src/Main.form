@@ -912,6 +912,11 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  <Component id="jLabel31" min="-2" pref="183" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="343" max="-2" attributes="0"/>
+              </Group>
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
@@ -926,36 +931,31 @@
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="192" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="p1" max="32767" attributes="0"/>
-                              <Component id="jScrollPane3" max="32767" attributes="0"/>
-                          </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="-2" pref="114" max="-2" attributes="0"/>
-                                  <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace min="-2" pref="122" max="-2" attributes="0"/>
-                                  <Component id="p2" min="-2" pref="444" max="-2" attributes="0"/>
+                              <Component id="jButton11" alignment="0" min="-2" pref="467" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="p1" max="32767" attributes="0"/>
+                                      <Component id="jScrollPane3" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <EmptySpace min="-2" pref="122" max="-2" attributes="0"/>
+                                          <Component id="p2" min="-2" pref="444" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="114" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jButton12" min="-2" pref="443" max="-2" attributes="0"/>
+                                              <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
                               </Group>
                           </Group>
                       </Group>
                   </Group>
                   <EmptySpace pref="155" max="32767" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="jLabel31" min="-2" pref="183" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="343" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="jButton11" min="-2" pref="415" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="451" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
               </Group>
               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
@@ -995,9 +995,12 @@
                       <Component id="p2" pref="57" max="32767" attributes="0"/>
                       <Component id="p1" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
-                  <Component id="jButton11" min="-2" pref="110" max="-2" attributes="0"/>
-                  <EmptySpace pref="100" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="jButton11" pref="110" max="32767" attributes="0"/>
+                      <Component id="jButton12" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="96" max="32767" attributes="0"/>
               </Group>
               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
@@ -1121,7 +1124,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="24" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Revisar"/>
+            <Property name="text" type="java.lang.String" value="Revisar Simulacion"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton11ActionPerformed"/>
@@ -1139,6 +1142,17 @@
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton12">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="24" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="REINICIAR CONTENIDO"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton12ActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
