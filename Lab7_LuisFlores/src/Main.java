@@ -928,6 +928,8 @@ public class Main extends javax.swing.JFrame {
             DefaultComboBoxModel modelo = (DefaultComboBoxModel) cb.getModel();
             modelo.addElement(c);
             cb.setModel(modelo);
+            Usuarios u;
+           lista1.get(0).setC(c);
             JOptionPane.showMessageDialog(this, "COMPILADOR REGISTRADO");
             a_nombre.setText("");
             a_nombre1.setText("");
