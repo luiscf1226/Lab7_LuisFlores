@@ -89,27 +89,61 @@ public class Hilo extends Thread {
             if (avanzar) {
                 progBar.setMaximum(10);
                 progBar2.setMaximum(10);
-                progBar2.setValue(progBar.getValue() + 1);
+                // progBar2.setValue(progBar.getValue() + 1);
+                //progBar.setValue(progBar.getValue() + 1);
                 progBar.setValue(progBar.getValue() + 1);
-
-                //activar y modificar propiedad stringPainted para que esto funciones
-                // progBar.setString(Integer.toString(progBar.getValue()) + " Segundos");
-                /*
-                    if (progBar.getValue() == 1) {
+                //float codigo=123;
+                //String d="ERROR LEXICO";
+                if (progBar.getValue() == 1) {
+                    if (e.getLexico() < 300) {
+                        float codigo = 123;
+                        String d = "ERROR LEXICO";
                         DefaultTableModel modelo = (DefaultTableModel) tabla1.getModel();
 
                         Object newRow[] = {
-                            e.getNombre(),
-                            e.getApellido(),
-                            e.getEdad(),};
+                            codigo, d};
 
                         modelo.addRow(newRow);
 
                         tabla1.setModel(modelo);
-                        cont = cont + 1;
-
                     }
-                 */
+                    //comienzo
+                    progBar.setValue(0);
+                    progBar.setValue(progBar.getValue() + 1);
+                    if (progBar.getValue() == 1) {
+                        if (e.getSintatico() < 300) {
+                            float codigo = 1234;
+                            String d = "ERROR SINTATICO";
+                            DefaultTableModel modelo = (DefaultTableModel) tabla1.getModel();
+
+                            Object newRow[] = {
+                                codigo, d};
+
+                            modelo.addRow(newRow);
+
+                            tabla1.setModel(modelo);
+                        }
+                    }
+                    //comienzo
+                    progBar.setValue(0);
+                    progBar.setValue(progBar.getValue() + 1);
+                    if (progBar.getValue() == 1) {
+                        if (e.getSemantico() < 800) {
+                            float codigo = 12345;
+                            String d = "ERROR SEMANTICO";
+                            DefaultTableModel modelo = (DefaultTableModel) tabla1.getModel();
+
+                            Object newRow[] = {
+                                codigo, d};
+
+                            modelo.addRow(newRow);
+
+                            tabla1.setModel(modelo);
+                        }
+                    }
+                    //fin progres bar 1
+                    //
+                }
             }
             try {
                 Thread.sleep(500);

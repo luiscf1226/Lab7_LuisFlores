@@ -975,6 +975,7 @@ public class Main extends javax.swing.JFrame {
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         // TODO add your handling code here:
         Compilador c=(Compilador )cb.getSelectedItem();
+        h1.setE(c);
         h1.setAvanzar(true);
     }//GEN-LAST:event_jButton11ActionPerformed
 
