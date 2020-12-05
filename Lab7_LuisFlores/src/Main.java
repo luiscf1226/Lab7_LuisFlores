@@ -849,6 +849,11 @@ public class Main extends javax.swing.JFrame {
             a2.setPers(u1);
             a2.escribirArchivo();
             JOptionPane.showMessageDialog(this, "USUARIO REGISTRADO");
+            user.setText("");
+            pass.setText("");
+            name.setText("");
+            apell.setText("");
+            
 
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "ERROR");
@@ -924,6 +929,14 @@ public class Main extends javax.swing.JFrame {
             modelo.addElement(c);
             cb.setModel(modelo);
             JOptionPane.showMessageDialog(this, "COMPILADOR REGISTRADO");
+            a_nombre.setText("");
+            a_nombre1.setText("");
+            lineas1.setText("");
+            lineas2.setText("");
+            lineas3.setText("");
+            lineas4.setText("");
+            lineas5.setText("");
+            lineas6.setText("");
 
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "ERROR");
@@ -948,7 +961,8 @@ public class Main extends javax.swing.JFrame {
 
             table1.setModel(modelo);
             s = JOptionPane.showInputDialog("Desea Agregar mas? si= 's' ");
-
+            v.setText("");
+            t.setText("");
         }
         
     }//GEN-LAST:event_jButton9ActionPerformed
